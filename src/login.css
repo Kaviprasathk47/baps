@@ -1,30 +1,51 @@
+/* Base styles */
 body {
   display: flex;
-  justify-content: center; /* Center the login form horizontally */
-  align-items: center; /* Center the login form vertically */
-  height: 100vh; /* Ensure the login form is centered vertically */
-  background-color:transparent; /* Set a background color */
-  font-family: Arial, sans-serif; /* Set a base font family */
-  background-image: url(https://i.imgur.com/Lvw5V1e.jpeg);
+  background: no-repeat;
+  justify-content: flex-end;
+  align-items: center;
+  
+  height: 100vh;
+  background-color: transparent;
+  font-family: Arial, sans-serif;
+  background-image: url(https://i.imgur.com/sMuo4QT.jpeg);
+  background-size: cover;
+  transform: calc(100% - 10px);
 }
 
 .loginform {
-  width: 400px; /* Adjust width as needed */
-  margin: 50px auto;
+  width: 90%;
+  margin: 20px ;
+  margin-top: 60px;
+  max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
-  background-color: transparent; /* Set a background color for the login form */
+  background-color: transparent;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  /* Adjustments for smaller screens (e.g., phones) */
+  body {
+    justify-content: center;
+  }
+
+  .loginform {
+    width: 100%;
+  }
+}
+
+
 .loginform form {
-  display: flex; /* Allow icons to align with inputs */
+  display: flex;
   flex-direction: column;
-  padding: 0 20px; /* Add padding to ensure background extends to edges */
+  padding: 0 20px;
 }
 
 .loginform input {
-  width: calc(100% - 40px); /* Adjust width to account for padding */
+  width: calc(100% - 40px);
   padding: 12px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
@@ -32,8 +53,8 @@ body {
   font-size: 16px;
 }
 
-.loginform button {
-  width: calc(100% - 40px); /* Adjust width to account for padding */
+.submit {
+  width: calc(101%);
   padding: 12px;
   background-color: #000135;
   color: #fff;
@@ -41,30 +62,37 @@ body {
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.loginform button:hover {
+.loginform .submit:hover {
   transform: translateY(-5px);
 }
 
-.userIcon,
-.lockIcon {
-  position: absolute;
-  top: 50%;
-  right: 30px;
-  transform: translateY(-50%);
-}
-.input-container {
+.inputWithIcon {
   position: relative;
-  display: inline-block;
 }
 
-.userIcon {
-  color: #000135;
+.inputWithIcon input {
+  padding-left: 30px;
 }
 
-.lockIcon {
-  color: #000135;
+.inputWithIcon .icon {
+  position: absolute;
+  left: 10px;
+  top: 30%;
+  transform: translateY(-50%);
+  font-size: 20px !important;
+}
+
+#userIcons {
+  transform: translateY(-40%);
+  background-color: transparent;
+}
+
+#lockicons {
+  transform: translateY(-50%) !important;
+  background-color: transparent;
 }
 
 .button-container {
@@ -75,27 +103,36 @@ body {
 .google {
   position: relative;
   z-index: 1;
-  margin-right: 0; /* Adjust margin between icon and button */
-  font-size: 20px;
+  margin-right: 0;
+  font-size: 100px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
- position: 40px ,2px;
+  position: 40px ,2px;
+  transform: translateX(180%);
 }
 
 .butcolor {
   padding: 10px 20px;
-  background-color: #000135;
-  color: #fff;
+  background-color: white;
+  color: #020412;
+  font-size: 15px;
+  font-family: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 400%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0)
+
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-90%);
   cursor: pointer;
 }
 
-.button-container:hover .google {
-  transform: translateY(-5px); /* Move the icon left when hovered over the container */
+.eyeIcon:focus {
+  outline: none;
 }
-
-.button-container:hover .butcolor {
-  transform: translateY(-5px); /* Move the button left when hovered over the container */
-}
-

@@ -14,7 +14,7 @@ const Login = () => {
     setVisible(prevVisible => !prevVisible);
   };
 
-  const Icon = visible ? <FaRegEyeSlash onClick={toggleVisibility} /> : <FaRegEye onClick={toggleVisibility} />;
+  const Icon = visible ? <FaRegEyeSlash className='eyeIcon' onClick={toggleVisibility} /> : <FaRegEye className='eyeIcon'   onClick={toggleVisibility} />;
   const InputType = visible ? "text" : "password";
 
   const handleSubmit = (event) => {
@@ -27,41 +27,43 @@ const Login = () => {
   return (
    
     <div className="loginform">
-      <form onSubmit={handleSubmit}>
-      <FaUserCircle  className="userIcon" />
-        <input
+  <form onSubmit={handleSubmit}>
+    <div className="inputWithIcon">
+      <FaUserCircle className="icon" id='userIcons' />
+      <input
         className='user'
-          type="text"
-          placeholder="    User ID"
-          value={username}
-          onChange={(event) => setUsername(event.target.value)}
-          required
-          maxLength={10}
-          
-        />
-        
-       
-        <br />
-        <FaLock className="lockIcon"  />
+        type="text"
+        placeholder="User ID"
+        value={username}
+        onChange={(event) => setUsername(event.target.value)}
+        required
+        maxLength={10}
+      />
+    </div>
+    
+    <div className="inputWithIcon">
+      <FaLock className="icon" id='lockicons' />
 
-        <div>
-         
-          <input
-           className='lock'
-            type={InputType}
-            placeholder="    Password"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-            required
-          />
-          {Icon}
-        </div>
+      <input
+        className='lock'
+        type={InputType}
+        placeholder="Password"
+        value={password}
+        onChange={(event) => setPassword(event.target.value)}
+        required
+        maxLength={10}
+      />
+            {Icon}
+
+    </div>
         <br />
-        <button type="submit">Login</button>
-        <p>_______________or________________</p>
+        <button type="submit" className='submit'>Login</button>
+        <div className='or'>
+          <p>OR</p>
+        </div>
         <div className='button-container'>
   <FcGoogle className='google'/>
-  <button type='submit' className='butcolor'>  Sign-In with GOOGLE</button>
+  <button type='button' className='butcolor'>Sign-In with GOOGLE</button>
 </div>
 
         
@@ -72,3 +74,4 @@ const Login = () => {
 };
 
 export default Login;
+
