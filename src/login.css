@@ -1,0 +1,101 @@
+body {
+  display: flex;
+  justify-content: center; /* Center the login form horizontally */
+  align-items: center; /* Center the login form vertically */
+  height: 100vh; /* Ensure the login form is centered vertically */
+  background-color:transparent; /* Set a background color */
+  font-family: Arial, sans-serif; /* Set a base font family */
+  background-image: url(https://i.imgur.com/Lvw5V1e.jpeg);
+}
+
+.loginform {
+  width: 400px; /* Adjust width as needed */
+  margin: 50px auto;
+  padding: 20px;
+  background-color: transparent; /* Set a background color for the login form */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.loginform form {
+  display: flex; /* Allow icons to align with inputs */
+  flex-direction: column;
+  padding: 0 20px; /* Add padding to ensure background extends to edges */
+}
+
+.loginform input {
+  width: calc(100% - 40px); /* Adjust width to account for padding */
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.loginform button {
+  width: calc(100% - 40px); /* Adjust width to account for padding */
+  padding: 12px;
+  background-color: #000135;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.loginform button:hover {
+  transform: translateY(-5px);
+}
+
+.userIcon,
+.lockIcon {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+}
+.input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.userIcon {
+  color: #000135;
+}
+
+.lockIcon {
+  color: #000135;
+}
+
+.button-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.google {
+  position: relative;
+  z-index: 1;
+  margin-right: 0; /* Adjust margin between icon and button */
+  font-size: 20px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+ position: 40px ,2px;
+}
+
+.butcolor {
+  padding: 10px 20px;
+  background-color: #000135;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container:hover .google {
+  transform: translateY(-5px); /* Move the icon left when hovered over the container */
+}
+
+.button-container:hover .butcolor {
+  transform: translateY(-5px); /* Move the button left when hovered over the container */
+}
+
