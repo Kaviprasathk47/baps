@@ -1,10 +1,8 @@
-/* Base styles */
 body {
   display: flex;
   background: no-repeat;
   justify-content: flex-end;
   align-items: center;
-  
   height: 100vh;
   background-color: transparent;
   font-family: Arial, sans-serif;
@@ -22,7 +20,9 @@ body {
   padding: 20px;
   background-color: transparent;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding-top: 50%;
+  left: 70%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Media queries for responsiveness */
@@ -43,6 +43,7 @@ body {
   flex-direction: column;
   padding: 0 20px;
 }
+
 
 .loginform input {
   width: calc(100% - 40px);
