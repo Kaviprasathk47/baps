@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { FaUserCircle, FaRegEye, FaRegEyeSlash, FaLock } from "react-icons/fa";
+import {  FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import './login.css';
 
@@ -31,24 +31,24 @@ const Login = () => {
     <div className="loginform">
       <form onSubmit={handleSubmit}>
         <div className={`inputWithIcon ${username ? 'focused' : ''}`} onClick={() => focusInput(usernameInputRef)}>
-          <FaUserCircle className="icon" id='userIcons' />
+         
           <input
             ref={usernameInputRef}
             className='user'
             type="text"
-            placeholder={username ? '' : ' User ID'}  // Set placeholder only if username is empty
+            placeholder={username ? '' : 'User ID'}  // Set placeholder only if username is empty
             value={username}
             onChange={(event) => setUsername(event.target.value)}
           />
         </div>
 
         <div className={`inputWithIcon ${password ? 'focused' : ''}`} onClick={() => focusInput(passwordInputRef)}>
-          <FaLock className="icon" id='lockicons' />
+        
           <input
             ref={passwordInputRef}
             className='lock'
             type={InputType}
-            placeholder={password ? '' : ' Password'}  // Set placeholder only if password is empty
+            placeholder={ password ? '' : 'Password'}   // Set placeholder only if password is empty
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />
@@ -56,13 +56,20 @@ const Login = () => {
         </div>
         <br />
         <button type="submit" className='submit'>Login</button>
-        <p>_______________or________________</p>
+        <p><hr /></p>
         <div className='button-container'>
-          <FcGoogle className='google'/>
-          <button type='button' className='butcolor'>Sign-In with GOOGLE</button>
-        </div>
+    
+    <button type='button' className='butcolor' onClick={() => alert("Your account is not valid")}>
+        {/* You can add content to your button here, such as text or an icon */}
+        Sign in with Google
+    </button>
+    {/* I'm assuming FcGoogle is an icon component */}
+    <FcGoogle className='google' />
+</div>
+
       </form>
     </div>
+    
   );
 };
 

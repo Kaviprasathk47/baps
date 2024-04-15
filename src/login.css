@@ -1,42 +1,23 @@
+/* Base styles */
+
 body {
   display: flex;
-  background: no-repeat;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: transparent;
-  font-family: Arial, sans-serif;
-  background-image: url(https://i.imgur.com/sMuo4QT.jpeg);
+  min-height: 100vh;
+  margin: 0;
+  background: url(https://i.imgur.com/sMuo4QT.jpeg) no-repeat center center fixed;
   background-size: cover;
-  transform: calc(100% - 10px);
+  font-family: Arial, sans-serif;
 }
 
 .loginform {
   width: 90%;
-  margin: 20px ;
-  margin-top: 60px;
   max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: transparent;
+  padding: 40px;
   border-radius: 10px;
-  padding-top: 50%;
-  left: 70%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
 }
-
-/* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
-  /* Adjustments for smaller screens (e.g., phones) */
-  body {
-    justify-content: center;
-  }
-
-  .loginform {
-    width: 100%;
-  }
-}
-
 
 .loginform form {
   display: flex;
@@ -44,96 +25,131 @@ body {
   padding: 0 20px;
 }
 
-
 .loginform input {
-  width: calc(100% - 40px);
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 16px;
+  width: calc(100% - 1rem);
+  font-size: 12px;
+  height: 2em;
+  border: none;
+  outline: none;
+  background: transparent;
+  
 }
 
 .submit {
-  width: calc(101%);
-  padding: 12px;
+  width: 20.1rem;
+  padding: 1rem;
   background-color: #000135;
-  color: #fff;
+  color: aliceblue;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.loginform .submit:hover {
+.submit:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 .inputWithIcon {
   position: relative;
+  display: block;
+  background-color:transparent;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+ 
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  width: calc(30rem - 10rem);
+  
+  box-sizing: border-box; 
 }
 
-.inputWithIcon input {
-  padding-left: 30px;
-}
 
-.inputWithIcon .icon {
+
+
+.eyeIcon{
   position: absolute;
-  left: 10px;
-  top: 30%;
-  transform: translateY(-50%);
-  font-size: 20px !important;
+  top: 2.3rem;
+  right: 1rem;
+  transform: translateY(-85%) !important;
+  font-size: 1.25rem;
+} 
+@media screen and (max-width: 769px) {
+  .loginform {
+    width: 100%;
+    padding: 100px;
+  }
 }
 
-#userIcons {
-  transform: translateY(-40%);
-  background-color: transparent;
-}
 
-#lockicons {
-  transform: translateY(-50%) !important;
-  background-color: transparent;
-}
 
-.button-container {
-  display: inline-flex;
-  align-items: center;
-}
 
 .google {
-  position: relative;
-  z-index: 1;
-  margin-right: 0;
-  font-size: 100px;
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-  position: 40px ,2px;
-  transform: translateX(180%);
+ 
+ font-size: 2rem;
+ transform: translateY(-2.5rem);
 }
 
 .butcolor {
-  padding: 10px 20px;
-  background-color: white;
+  padding: 1rem;
+  justify-content: center;
+  background-color: transparent;
   color: #020412;
-  font-size: 15px;
-  font-family: bold;
+  font-size: 1rem;
+ 
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  width: 400%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0)
-
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  width: 20.6rem;
+  
+  margin: -1%;
+  margin-top: 10%;
 }
 
-.eyeIcon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-90%);
-  cursor: pointer;
+
+
+@media screen and (max-width: 992px) { 
+ 
+.loginform {
+    width: 100%; 
+    padding: 20px;
+    
+  }
+ 
+.loginform input {
+    padding: 10px;
+  }
 }
 
-.eyeIcon:focus {
-  outline: none;
+@media screen and (max-width: 768px) {
+   .loginform {/*this for mobile size - any error ocurred ajust this  to solve in view */
+    padding: 10px;
+  }
+  
+  .submit {
+    font-size: 0.9rem; 
+  }
+  body {
+    background-image: none; 
+    background-color: white;  
+  }
 }
+@media screen and (max-width: 1024px) { 
+ 
+  .loginform {
+    padding: 10px;
+  }
+  
+  .loginform input {
+    padding: 10px;
+  }
+  body {
+    background-image: none; 
+    background-color: white;  
+  }
+}
+
+
