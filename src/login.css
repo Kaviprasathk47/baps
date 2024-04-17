@@ -12,11 +12,14 @@ body {
 }
 
 .loginform {
-  width: 90%;
-  max-width: 600px;
-  padding: 40px;
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
   border-radius: 10px;
-  
+  display:flex ;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  transform: translate(-5rem);
 }
 
 .loginform form {
@@ -36,7 +39,7 @@ body {
 }
 
 .submit {
-  width: 20.1rem;
+  width: 17rem;
   padding: 1rem;
   background-color: #000135;
   color: aliceblue;
@@ -61,7 +64,7 @@ body {
   margin-bottom: 1rem;
   border-radius: 1rem;
   font-size: 1rem;
-  width: calc(30rem - 10rem);
+  width: 17rem;
   
   box-sizing: border-box; 
 }
@@ -80,6 +83,7 @@ body {
   .loginform {
     width: 100%;
     padding: 100px;
+    align-items: center;
   }
 }
 
@@ -103,7 +107,7 @@ body {
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
-  width: 20.6rem;
+  width: 17.5rem;
   
   margin: -1%;
   margin-top: 10%;
@@ -116,6 +120,7 @@ body {
 .loginform {
     width: 100%; 
     padding: 20px;
+    align-items: center;
     
   }
  
@@ -124,7 +129,7 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 770px) {
    .loginform {/*this for mobile size - any error ocurred ajust this  to solve in view */
     padding: 10px;
   }
@@ -141,6 +146,7 @@ body {
  
   .loginform {
     padding: 10px;
+    align-items: center;
   }
   
   .loginform input {
